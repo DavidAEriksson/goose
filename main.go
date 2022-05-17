@@ -1,14 +1,7 @@
 package main
 
-import (
-  "fmt"
-  "github.com/gorilla/mux"
-  "log"
-  "net/http"
-)
+import c "goose/lib"
 
 func main() {
-  r := mux.NewRouter()
-  fmt.Println("Starting server on port 8080")
-  log.Fatal(http.ListenAndServe(":8080", r))
+  c.Start()
 }
