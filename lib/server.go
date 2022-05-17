@@ -18,6 +18,7 @@ func Start() {
   port := os.Getenv("SERVER_PORT")
 
   r := mux.NewRouter()
+  r.HandleFunc("/auth", RedirectUser)
   fmt.Println("Server is running on port " + port)
   log.Fatal(http.ListenAndServe(":" + port, r))
 }
