@@ -15,7 +15,7 @@ func Start() {
     log.Fatal("Error loading .env file")
   }
 
-  port := os.Getenv("SERVER_PORT")
+  port := os.Getenv("GOOSE_SERVER_PORT")
 
   r := mux.NewRouter()
   r.HandleFunc("/auth", RedirectUser)
